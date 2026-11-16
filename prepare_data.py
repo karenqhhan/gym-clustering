@@ -45,7 +45,7 @@ def load_member_splits():
 
 def load_scaled_features():
     """Return training and test features scaled from the training set only."""
-    _, _, train_scaled, test_scaled = load_member_splits()
+    _, _, train_scaled, test_scaled, _ = load_member_splits()
     return (
         train_scaled.reset_index(drop=True),
         test_scaled.reset_index(drop=True),

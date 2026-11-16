@@ -11,7 +11,7 @@ def main():
     pd.set_option("display.width", None)
     pd.set_option("display.float_format", lambda value: f"{value:.1f}")
 
-    train_features, test_features, train_scaled, test_scaled = load_member_splits()
+    train_features, test_features, train_scaled, test_scaled, _ = load_member_splits()
 
     model = KMeans(n_clusters=4, random_state=42, n_init=10)
     model.fit(train_scaled)
